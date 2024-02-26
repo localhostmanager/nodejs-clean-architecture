@@ -13,5 +13,5 @@ const main = async () => {
   }
 };
 
-config({ path: "src/.env", debug: true });
+config({ path: "src/.env", debug: true,encoding:'latin1' });
 main();
