@@ -4,15 +4,28 @@ import { NotFoundError } from "@error-custom//NotFoundError";
 import { CreateTestDTO } from "@dtos/createTestDTO";
 import { validate } from "class-validator";
 import { Test } from "@entities/Test";
+import { ILogger } from "application/interfaces/common/ILogger";
+import { Logger } from "@helpers/logger";
+import { EventId } from "@helpers/EventId";
 
 export class TestController {
-  constructor(private _testServices: ITestServices) {}
+
+    _logger: ILogger<TestController> = new Logger<TestController>();
+
+    constructor(private _testServices: ITestServices) {}
 
   getAll = async (req: Request, res: Response, next: NextFunction) => {
     try {
       const response = await this._testServices.GetAll();
 
       if (response.length === 0) {
+        this._logger.logError(null,new NotFoundError("hello"),{message:"No data found"});
+        
+        this._logger.logCritical(null,new NotFoundError("hello"),{message:"No data found"});
+        this._logger.logDebug(null,new NotFoundError("hello"),{message:"No data found"});
+        this._logger.logInformation(null,new NotFoundError("hello"),{message:"No data found"});
+        this._logger.logTrace(null,new NotFoundError("hello"),{message:"No data found"});
+        this._logger.logWarning(null,new NotFoundError("hello"),{message:"No data found"});
         throw new NotFoundError("No data found");
       }
 
