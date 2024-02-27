@@ -2,7 +2,7 @@ import { AppDataSource } from "@typeorm-config";
 import { ExpressConfig } from "@express-config";
 import * as express from "express";
 import { config } from "dotenv";
-import { ILogger } from "application/interfaces/common/ILogger";
+import { ILogger } from "@interfaces/common/ILogger";
 import { Logger } from "@helpers/logger";
 
 const main = async () => {

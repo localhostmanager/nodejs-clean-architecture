@@ -14,7 +14,8 @@
       "@typeorm-config": ["infrastructure/typeorm.config.ts"],
       "@dtos/*": ["application/dtos/*"],
       "@express-config": ["config/express.config.ts"],
-      "@error-custom/*": ["error-handling/*"]
+      "@error-custom/*": ["error-handling/*"],
+      "@interfaces/common/*": ["application/interfaces/common/*"],
     },
     "lib": ["ES2015", "ESNext"],
     "target": "ESNext",

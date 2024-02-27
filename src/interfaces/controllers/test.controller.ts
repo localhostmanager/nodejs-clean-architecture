@@ -4,9 +4,8 @@ import { NotFoundError } from "@error-custom//NotFoundError";
 import { CreateTestDTO } from "@dtos/createTestDTO";
 import { validate } from "class-validator";
 import { Test } from "@entities/Test";
-import { ILogger } from "application/interfaces/common/ILogger";
+import { ILogger } from "@interfaces/common/ILogger";
 import { Logger } from "@helpers/logger";
-import { EventId } from "@helpers/EventId";
 
 export class TestController {
 

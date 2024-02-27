@@ -3,7 +3,7 @@ import * as bodyParser from "body-parser";
 import { testRoute } from "@routes/test.route";
 import { ErrorHandler } from "@middlewares/error.handler.middleware";
 import * as cors from "cors";
-import { ILogger } from "application/interfaces/common/ILogger";
+import { ILogger } from "@interfaces/common/ILogger";
 import { Logger } from "@helpers/logger";
 
 export class ExpressConfig {
