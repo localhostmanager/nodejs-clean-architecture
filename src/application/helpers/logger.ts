@@ -1,7 +1,6 @@
-import { ILogger } from "application/interfaces/common/ILogger";
+import { ILogger } from "@interfaces/common/ILogger";
 import { EventId } from "./EventId";
 import { Color, bold, italic } from "colors";
-import { getClassName } from "./className";
 
 export class Logger<T> implements ILogger<T> {
 
